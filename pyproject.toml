@@ -1,0 +1,64 @@
+[project]
+name = "#TODO_Project_Name"
+version = "0.0.1"
+description = "#TODO: Short description of the project"
+authors = [
+  {name = "Python User Group Nürnberg"},
+  {name = "Nürnberg Data Science & Artificial Intelligence"},
+]
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+#TODO: adapt dependencies
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0"
+ruff = "^0.14"
+
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+pythonVersion = "3.11"
+extraPaths = [".venv/Lib/site-packages"]
+include = ["**/*"]
+exclude = ["**/site-packages/**", "**/__pycache__"]
+typeCheckingMode = "standard"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+show-fixes = true
+
+[tool.ruff.format]
+docstring-code-format = true
+quote-style = "double"
+
+[tool.ruff.lint]
+select = [
+  "ANN", "B", "C4", "COM", "D", "E", "EM", "F", "I", "N", "NPY", "PD", "PLR", "PLW", "PLE", "PLC", "PT", "Q", "RUF", "SIM", "TRY", "W"
+]
+ignore = [
+  "ANN003", "COM812", "COM819", "D100", "D103", "D104", "D206", "D300", "E111", "E114", "E117", "E501", "E712", "N803", "N806", "RUF005", "W191"
+]
+unfixable = ["F401", "F841"]
+task-tags = ["TODO", "BUG", "NOTE"]
+
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = true
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+docstring-quotes = "double"
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["E402"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

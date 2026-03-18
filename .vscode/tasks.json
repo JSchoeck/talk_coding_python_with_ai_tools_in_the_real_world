@@ -1,0 +1,66 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "shell": {
+            "executable": "C:\\Windows\\System32\\cmd.exe",  // specify cmd.exe to ensure PowerShell is not used
+            "args": ["/d", "/c"]  // /d disables autorun commands, /c closes terminal after command execution
+        },
+        "env": {
+            "DEBUGPY_PROCESS_SPAWN_TIMEOUT": "90",
+            "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "30"
+        }
+    },
+    "tasks": [
+        {
+            "label": "poetry install",
+            "type": "shell",
+            "command": "poetry install --no-root",
+            "dependsOn": "poetry lock"
+        },
+        {
+            "label": "poetry lock",
+            "type": "shell",
+            "command": "poetry lock"
+        },
+        {
+            "label": "poetry sync",
+            "type": "shell",
+            // Remove and install dependencies, so that the venv exactly matches the lock file
+            "command": "poetry sync",
+            "dependsOn": "poetry lock"
+        },
+        {
+            "label": "conda deactivate",
+            "type": "shell",
+            "command": "conda deactivate"
+        },
+        {
+            "label": "poetry env use",
+            "type": "shell",
+            // If the default Python interpreter is set to the matching Python version, poetry will create a local venv based on it. If not, you need to manually run `poetry env use <path_to_python_executable>` once with the correct Python version's path.
+            "command": "poetry env use ${config:python.defaultInterpreterPath}"
+        },
+        {
+            "label": "create environment (poetry)",
+            "type": "shell",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "conda deactivate",
+                "poetry env use",
+                "poetry install",
+                "info: interpreter selection",
+                "select .venv interpreter"
+            ]
+        },
+        {
+            "label": "info: interpreter selection",
+            "type": "shell",
+            "command": "echo ***************************************************************** && echo *** Select the local interpreter at: .venv\\Scripts\\python.exe *** && echo *****************************************************************"
+        },
+        {
+            "label": "select .venv interpreter",
+            "command": "${command:python.setInterpreter}",
+            "args": ["${workspaceFolder}\\.venv\\Scripts\\python.exe"]
+        }
+    ]
+}

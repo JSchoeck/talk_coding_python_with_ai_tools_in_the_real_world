@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "name": "Debug current file",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "justMyCode": false,
+        "autoReload": {
+            "enable": true
+        },
+        "env": {
+            "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "30"
+    }
+    },
+    {
+        "name": "Streamlit app.py (local, poetry)",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "streamlit",
+        "preLaunchTask": "poetry sync",
+        "redirectOutput": true,
+        "args": [
+            "run",
+            "${workspaceRoot}\\${STREAMLIT_APP}"
+        ],
+        "env": {
+            "STREAMLIT_APP": "\\src\\app.py",
+            "PYTHONPATH": "${workspaceRoot}",
+            "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "30"
+        }
+    }
+  ]
+}

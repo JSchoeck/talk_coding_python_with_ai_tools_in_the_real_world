@@ -1,0 +1,5 @@
+{
+    "chat.useAgentSkills": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false
+}

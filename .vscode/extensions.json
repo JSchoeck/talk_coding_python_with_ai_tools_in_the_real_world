@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "GitHub.copilot-chat",
+    "charliermarsh.ruff",
+    "alexcvzz.vscode-sqlite",
+  ]
+}
