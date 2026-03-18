@@ -7,13 +7,13 @@ authors = [
   {name = "Nürnberg Data Science & Artificial Intelligence"},
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.14"
 
 [tool.poetry]
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.14"
 #TODO: adapt dependencies
 
 [tool.poetry.group.dev.dependencies]
@@ -25,14 +25,14 @@ requires = ["poetry-core>=2.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pyright]
-pythonVersion = "3.11"
+pythonVersion = "3.14"
 extraPaths = [".venv/Lib/site-packages"]
 include = ["**/*"]
 exclude = ["**/site-packages/**", "**/__pycache__"]
 typeCheckingMode = "standard"
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py314"
 line-length = 120
 show-fixes = true
 
