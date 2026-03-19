@@ -51,7 +51,7 @@
 
 ## Libraries and frameworks
 
-- For data manipulation, prefer pandas or polars - ask the user for their preference.
+- For data manipulation, prefer pandas.
 - For machine learning, prefer scikit-learn.
 - For web applications, prefer Streamlit.
 - For data visualization, prefer hvplot and bokeh.
