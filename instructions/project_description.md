@@ -2,23 +2,22 @@
 
 ## Summary
 
-TODO: A short, high‑level description of the project
+A web app that calculates my income tax in Germany based on my salary and other relevant parameters, and provides insights into how to optimize my tax situation.
 
 ## Goal / Purpose
 
-TODO: Why the project exists and what problem it solves
+The goal of this project is to help individuals in Germany understand their income tax obligations and identify potential ways to reduce their tax burden. The app aims to simplify the complex tax calculation process and provide actionable insights for better financial planning.
 
 ## Requirements
 
-TODO: What the project must do, and how it should be done. This includes both functional and non-functional requirements
-
-- ...
+- Ask for salary
+- Ask for state where user lives
+- Ask for tax class
+- Ask for the income year
 
 ## Tech Stack
 
-TODO: What technologies, libraries, and frameworks should be used for the project, and optionally why
-
-- ...
+- Streamlit for the web app
 
 ## Folder Structure
 
@@ -26,32 +25,19 @@ TODO: What technologies, libraries, and frameworks should be used for the projec
 - `/src`: Contains all of the source code.
 - `/docs`: Contains documentation for the project, including API specifications and user guides.
 
-## Input Data
-
-- ...
-
-## Business Rules
-
-- ...
-
 ## User Stories and Example Behavior
 
-- ...
+- tbd
 
 ## Output Data
 
-- ...
+- Show the user their calculated income tax based on the input parameters.
 
 ## Design & Look
 
-- ...
-
-## MVP Specification
-
-What is the absolutely minimal version of the project that can be built to meet the requirements and achieve the goal:
-
-- ...
+- Use yellow and blue colors like in the python logo
 
 ## Extensions and Nice-to-Have Features
 
-- ...
+- Ask about marital status and number of children to calculate tax benefits
+- Create an overview of how much tax user would pay in another state

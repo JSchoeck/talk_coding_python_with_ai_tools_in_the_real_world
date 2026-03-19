@@ -1,12 +1,12 @@
 [project]
-name = "#TODO_Project_Name"
+name = "german-tax-mvp"
 version = "0.0.1"
-description = "#TODO: Short description of the project"
+description = "Streamlit MVP app to estimate German income tax with optimization hints."
 authors = [
   {name = "Python User Group Nürnberg"},
   {name = "Nürnberg Data Science & Artificial Intelligence"},
 ]
-readme = "README.md"
+readme = "readme.md"
 requires-python = ">=3.14"
 
 [tool.poetry]
@@ -14,7 +14,8 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.14"
-#TODO: adapt dependencies
+streamlit = "^1.49.0"
+pyyaml = "^6.0.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.0"
@@ -62,3 +63,6 @@ docstring-quotes = "double"
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

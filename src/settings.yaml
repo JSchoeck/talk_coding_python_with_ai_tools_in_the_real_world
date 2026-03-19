@@ -1,0 +1,41 @@
+supported_years:
+  - 2024
+  - 2025
+  - 2026
+
+base_rate_by_year:
+  2024: 0.23
+  2025: 0.235
+  2026: 0.24
+
+tax_class_adjustments:
+  "I": 0.0
+  "II": -0.01
+  "III": -0.05
+  "IV": -0.02
+  "V": 0.04
+  "VI": 0.08
+
+state_adjustments:
+  Baden-Württemberg: 0.001
+  Bavaria: 0.002
+  Berlin: 0.004
+  Brandenburg: 0.000
+  Bremen: 0.003
+  Hamburg: 0.004
+  Hesse: 0.002
+  Lower Saxony: 0.000
+  Mecklenburg-Vorpommern: -0.001
+  North Rhine-Westphalia: 0.002
+  Rhineland-Palatinate: 0.000
+  Saarland: -0.001
+  Saxony: -0.001
+  Saxony-Anhalt: -0.001
+  Schleswig-Holstein: 0.001
+  Thuringia: -0.001
+
+married_allowance: 4000.0
+child_allowance_per_child: 2500.0
+max_children_for_allowance: 4
+min_effective_tax_rate: 0.10
+max_effective_tax_rate: 0.50
