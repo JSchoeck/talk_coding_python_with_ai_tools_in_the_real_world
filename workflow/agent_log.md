@@ -1,3 +1,5 @@
+# Agent log
+
 ## 2026-03-19 19:12:42
 
 - Started MVP implementation based on confirmed scope from user.
@@ -14,3 +16,10 @@
 - Validation: `poetry run python -m pytest tests/test_tax_calculator.py -q` passed (`4 passed`).
 - Added pytest config in `pyproject.toml` (`[tool.pytest.ini_options] pythonpath = ["."]`) to ensure direct `poetry run pytest` path resolution.
 - Final validation: `poetry run pytest tests/test_tax_calculator.py -q` passed (`4 passed`).
+
+## 2026-03-19
+
+- Received user request to change the app theme to red and white.
+- Updated `src/app.py` banner gradient and text accents from yellow/blue to a red/white palette.
+- Added global Streamlit theme configuration in `.streamlit/config.toml` with red/white colors.
+- Appended theme decision to `workflow/project_decisions.md`.

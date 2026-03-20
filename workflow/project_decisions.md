@@ -8,3 +8,4 @@
 - Include short optimization suggestions as text.
 - Keep styling minimal with Streamlit defaults and subtle yellow/blue accents.
 - Defer state-by-state comparison and detailed component breakdown to a later iteration.
+- Update theme colors to a red-and-white palette for the app UI.

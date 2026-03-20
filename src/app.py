@@ -20,11 +20,12 @@ def _render_header() -> None:
         """
         <style>
             .mvp-banner {
-                background: linear-gradient(90deg, #3776ab 0%, #ffde57 100%);
-                color: #0f172a;
+                background: linear-gradient(90deg, #b91c1c 0%, #ffffff 100%);
+                color: #7f1d1d;
                 padding: 0.75rem 1rem;
                 border-radius: 0.5rem;
                 font-weight: 600;
+                border: 1px solid #fecaca;
             }
         </style>
         """,
